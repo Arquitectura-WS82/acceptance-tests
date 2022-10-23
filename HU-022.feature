@@ -1,9 +1,8 @@
-Feature: Como usuario quiero visualizar mi perfil y poder editar mis datos para mantener actualizada mi información. 
+Feature: Como cliente Quiero tener formas de que me notifiquen acerca de las propuestas enviadas Para poder realizar el pago correspondiente
 
-    Scenario: E01: Como usuario deseo poder visualizar mi propio perfil  
-
-        Given el cliente desea observar su propio perfil de usuario
-        And se encuentra en el apartado principal del home
-        When se dirija a la opcion “My-profile” 
-        Then podrá visualizar toda la información correspondiente a su perfil de usuario
-            And podrá visualizar toda la información correspondiente a su perfil de usuario
+    Scenario: E01: El cliente recibe notificaciones correctamente
+ 
+        Given que La cliente quiere recibir notificaciones acerca de las propuestas que envió
+            And se dirige a la sección de notificaciones
+        When haya una nueva notificación 
+        Then observa las notificación recibidas ya sean aceptadas o rechazadas
