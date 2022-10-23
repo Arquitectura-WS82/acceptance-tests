@@ -1,11 +1,8 @@
-Escenario N°1: El cliente deseo poder observar el perfil del transportista para contratar 
+Feature: Como cliente Quiero observar el perfil del transportista Para contratarlo
 
-  
-
-Dado que el cliente desea observar el perfil del transportista luego de hacer la búsqueda. 
-
-Y se encuentra con los automóviles y ve alguno que le agrade  
-
-Cuando lo presiona le aparece el perfil del usuario 
-
-Entonces si le agrada el servicio presiona contratar. 
+    Scenario: E01: El cliente deseo poder observar el perfil del transportista para contratar
+ 
+    Given que el cliente desea observar el perfil del transportista luego de hacer la búsqueda.
+        And se encuentra con los automóviles y ve alguno que le agrade 
+    When lo presiona le aparece el perfil del usuario
+    Then si le agrada el servicio presiona contratar.
