@@ -1,11 +1,7 @@
-Feature: Como cliente quiero reportar alguna incidencia que haya visto con respecto al servicio
+Feature: Como transportista quiero rellenar mi información de pago para recibir el pago correspondiente por el servicio brindado
 
-    Scenario: E01: El cliente desea hacer un reporte de incidencia
+    Scenario: E01: El transportista desea poder confirmar el método de pago por el servicio brindado
 
-        Given el cliente quiere hacer un reporte de incidencia
-            And se dirige al perfil del transportista
-        When selecciona la opción "Claims"
-            And rellena la información necesaria
-            And escribe el mensaje explicando el percance
-            And presiona aceptar
-        Then el reporte es enviado al transportista y al soporte de la empresa
+        Given el transportista rellene su información de pago
+        When se termine de realizar el servicio se visualizará un formulario con información de pago
+        Then presionará "Enviar" para que el usuario reciba su información de pago
