@@ -1,13 +1,16 @@
-Feature: Como cliente quiero escoger el tipo de servicio para que pueda encontrar los vehículos disponibles
+Feature: Como cliente quiero buscar el tipo de vehículo adecuado para así contratarlo 
 
-    Scenario: E01: El cliente escoge el tipo de servicio que quiere contratar
+    Scenario: E01: El cliente busca el vehículo adecuado para contratarlo
 
-        Given el cliente desea observar los servicios que se adecuen al trabajo que posee
-            And se le muestra la opción "Search by service"
-        When lo presiona le aparece un buscador por categorías 
-            And selecciona la categoría que desea
-        Then se le muestran los vehículos disponibles para el servicio que desea contratar 
-            And se le muestra la ubicación de los vehículos disponibles
-            And se le muestra un botón para conversar con el conductor
+        Given el cliente quiere buscar un vehículo adecuado para el servicio que requiere
+            And se ubica en la sección "Buscar".
+            And se selecciona el tipo de vehículo que desea contratar
+            And la cantidad/peso que va a transportar
+        When presione en "Enviar"
+        Then se le mostrarán los resultados de los vehículos acorde a su búsqueda
 
+    Example: 
 
+        | Tipo de vehículo | Cantidad/Peso |
+        | Carga pesada     | 1T            |
+        | Mudanza          | 50 cajas      |
