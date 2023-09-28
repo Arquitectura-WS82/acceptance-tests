@@ -1,11 +1,13 @@
-Feature: Como cliente quiero escoger el tipo de vehículo para así lograr contratarlo
+Feature: Como cliente quiero observar el perfil del transportista para contratarlo 
 
-    Scenario: E01: El cliente desea escoger el tipo de vehículo que desea contratar
+    Scenario: E01: El cliente desea poder observar el perfil del transportista para contratarlo
 
-        Given el cliente desea observar los servicios que se adecuen al trabajo que posee
-            And se le muestra la opción "Search by type of vehicle"
-        When lo presiona le aparece un buscador por categorías 
-            And selecciona la categoría que desea
-        Then se le muestran los vehículos disponibles para el tipo que seleccionó 
-            And se le muestra la ubicación de los vehículos disponibles
-            And se le muestra un botón para hacer un contrato con el conductor
+        Given el cliente desea observar el perfil del transportista luego de hacer la búsqueda
+            And se encuentra con los vehículos y ve alguno que se ajuste a sus requerimientos
+        When lo presiona le aparece el perfil del transportista
+        Then si le agrada el servicio presiona "Contratar"
+
+    Example:
+
+        | Transportista | Vehículo | Capacidad | Contratar |
+        | Juan Perez    | Bus      | 50        | Sí        |
