@@ -1,9 +1,12 @@
-Feature: Como cliente quiero decidir no revisar el servicio para que el pago sea más rápido
+Feature: Como usuario quiero acceder a un banco de preguntas frecuentes sobre la aplicación para despejar dudas.
+    Scenario: E01: El usuario accede a las preguntas frecuentes
 
-    Scenario: E01: El cliente no desea revisar el servicio
+        Given el usuario ha iniciado sesión en la aplicación
+        When selecciona la opción “Soporte” de la barra de navegación
+        And presiona sobre “Preguntas frecuentes”
+        Then le aparecerá un banco de preguntas frecuentes sobre la aplicación.
 
-        Given el cliente no desea observar cómo le fue con el servicio recibido
-        When el servicio ya se encuentra concluido
-        Then el cliente confirmará que el servicio ya terminó
-            And el sistema realizará el pago al transportista
+    Example:
 
+            | Sección | Pregunta                      |
+            | Soporte | ¿Cómo puedo editar mi perfil? |

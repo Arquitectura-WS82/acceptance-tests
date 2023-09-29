@@ -1,16 +1,12 @@
-Feature: Como cliente quiero seguir el transcurso del transportista para sentirme seguro con el servicio
+Feature: Como cliente quiero revisar el servicio brindado para sentirme más seguro.
+    Scenario: E01: El cliente desea revisar el servicio
 
-    Scenario: E01: El cliente revisa el transcurso de su viaje con internet
+        Given el cliente ha finalizado su servicio con el transportista
+        And ha seleccionado un modo de revisión
+        When realiza el modo de revisión seleccionado
+        Then si todo está correcto, procederá a realizar el pago al transportista.
 
-        Given el cliente desea observar cómo va su servicio contratado
-            And se le muestra la opción "Current services"
-        When lo presione verá un mapa con una marca que se actualiza cada minuto
-        Then el cliente puede observar el trayecto del transportista
+    Example:
 
-
-    Scenario: E02: El cliente revisa el transcurso de su viaje sin internet
-
-        Dado que el cliente desea observar cómo va su servicio contratado
-            And se le muestra la opción "Current services"
-        When lo presione verá un cuadro vacío
-        Then le aparecerá una alerta con el mensaje "No internet connection"
+            | Modo de revisión  | Estado | Pago al transportista |
+            | Inspección visual | Ok     | Realizado             |
